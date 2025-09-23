@@ -1,20 +1,18 @@
 package com.hwThing;
 
-import java.util.Comparator;
-
 public class Task {
-    String name;
-    String description;
-    int value;
-    long creationTime;
+    private String name;
+    private String description;
+    private Priority priorityValue;
+    private long creationTime;
 
     public Task() {
     }
 
-    public Task(String name, String description, int value) {
+    public Task(String name, String description, Priority importance) {
         this.name = name;
         this.description = description;
-        this.value = value;
+        this.priorityValue = importance;
         this.creationTime = System.currentTimeMillis();
     }
 
@@ -34,21 +32,17 @@ public class Task {
         this.description = description;
     }
 
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
-        this.value = value;
-    }
-
     public long getCreationTime() {
         return creationTime;
     }
 
+    public int getPriorityValue() {
+        return priorityValue.getImportance();
+    }
+
     @Override
     public String toString() {
-        return "Task{name'" + name + "', description= '" + description + "', value=" + value + "}";
+        return "Task{name'" + name + "', description= '" + description + "', Priority=" + priorityValue + "}";
     }
 
 }
