@@ -9,12 +9,6 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Fuck it. Everything gets done !");
-        Comparator<Task> taskComparator = new Comparator<Task>() {
-            @Override
-            public int compare(Task o1, Task o2) {
-                return o2.getPriorityValue() - o1.getPriorityValue();
-            }
-        };
 
         Task task = new Task("Effective Java", "Read effective java", Priority.High);
         Task task2 = new Task("Typing Test", "Preform routine typing test to increase typing speed", Priority.Low);
@@ -23,7 +17,7 @@ public class Main {
 
         Task[] tasks = new Task[] {task, task2, task3, task4};
 
-        PriorityQueue<Task> q = new PriorityQueue<>(taskComparator);
+        PriorityQueue<Task> q = new PriorityQueue<>();
         q.addAll(List.of(tasks));
 
         printTasks(q);

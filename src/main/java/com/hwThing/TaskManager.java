@@ -4,7 +4,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class TaskManager {
-    public static PriorityQueue<Task> taskQueue;
+    public static PriorityQueue<Task>    taskQueue;
 
     public TaskManager() {
     }
@@ -17,4 +17,6 @@ public class TaskManager {
     public void done(Task task) {
 
     }
+
+    Comparator<Task> taskComparator = (o1, o2) -> o2.getPriorityValue() - o1.getPriorityValue();
 }
