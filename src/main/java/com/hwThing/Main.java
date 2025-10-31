@@ -1,9 +1,8 @@
 package com.hwThing;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
+
 
 public class Main {
 
@@ -15,17 +14,10 @@ public class Main {
         Task task3 = new Task("Leetcode", "Practice datastructures and algorithms for interviews ", Priority.Medium);
         Task task4 = new Task("Jax 3", "Get the fuck out of pack", Priority.High);
 
+        System.out.println("task4 = " + task4);
+
         Task[] tasks = new Task[] {task, task2, task3, task4};
 
-        PriorityQueue<Task> q = new PriorityQueue<>();
-        q.addAll(List.of(tasks));
 
-        printTasks(q);
-    }
-
-    private static <T> void printTasks(PriorityQueue<T> queue) {
-        for (T item : queue) {
-            System.out.println(item);
-        }
     }
 }

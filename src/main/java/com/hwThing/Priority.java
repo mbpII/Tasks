@@ -1,6 +1,6 @@
 package com.hwThing;
 
-enum Priority {
+public enum Priority {
     High(3),
     Medium(2),
     Low(1);
